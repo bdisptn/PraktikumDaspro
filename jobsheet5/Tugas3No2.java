@@ -5,8 +5,6 @@ public class Tugas3No2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String pesan;
-
         //Input
         System.out.println("--- Sistem Hotspot Kampus ---");
         System.out.println("Jenis Pengguna? (Dosen/Mahasiswa/lainnya): ");
@@ -18,7 +16,7 @@ public class Tugas3No2 {
         } else if (jenisPengguna.equalsIgnoreCase("Mahasiswa")) {
             System.out.println("Masukkan jumlah SKS yang diambil: ");
             int sks = sc.nextInt();
-            if (sks >= 12) {
+             if (sks >= 12) {
                 System.out.println("Akses WIFI diberikan (Mahasiswa aktif)");
             } else {
                 System.out.println("Akses ditolak, SKS kurang dari 12");

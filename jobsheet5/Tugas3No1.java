@@ -13,7 +13,7 @@ public class Tugas3No1 {
         System.out.print("Apakah sudah registrasi online? (Ya/Tidak): ");
         String registrasi = sc.nextLine().trim();
 
-        if (bawaKartu.equalsIgnoreCase("Ya") && registrasi.equalsIgnoreCase("Ya")) {
+        if (bawaKartu.equalsIgnoreCase("Ya") || registrasi.equalsIgnoreCase("Ya")) {
             pesan = "Syarat terpenuhi. Silakan masuk";
         } else {
             pesan = "Syarat tidak terpenuhi. Anda tidak boleh masuk";
