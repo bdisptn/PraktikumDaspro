@@ -29,12 +29,12 @@ public class CM1_07 {
         System.out.print("Nilai Tugas\t: ");
         double tugas2 = sc.nextInt();
 
-        //Mencari nilai akhir 1 & 2
+        //MENCARI NILAI AKHIR 1 & 2
         double nilaiAkhir1, nilaiAkhir2;
         nilaiAkhir1 = (0.3*uts1)+(0.4*uas1)+(0.3*tugas1);
         nilaiAkhir2 = (0.3*uts2)+(0.4*uas2)+(0.3*tugas2);
         
-        //Konversi nilai akhir 1 ke nilai huruf
+        //KONVERSI NILAI AKHIR 1 KE NILAI HURUF
         String nilaiHuruf1;
         if (80 < nilaiAkhir1 && nilaiAkhir1 <= 100) {
                 nilaiHuruf1 = "A";
@@ -52,7 +52,7 @@ public class CM1_07 {
                 nilaiHuruf1 = "E";
         }
 
-        //Konversi nilai akhir 2 ke nilai huruf
+        //KONVERSI NILAI AKHIR 2 KE NILAI HURUF
         String nilaiHuruf2;
         if (80 < nilaiAkhir2 && nilaiAkhir2 <= 100) {
                 nilaiHuruf2 = "A";
@@ -70,19 +70,28 @@ public class CM1_07 {
                 nilaiHuruf2 = "E";
         }
 
-        //Status kelulusan matkul
-        String status;
+        //STATUS KELULUSAN MATKUL 1
+        String status1;
         if (nilaiAkhir1 >= 60) {
-            status = "LULUS";
+            status1  = "LULUS";
         } else {
-            status = "TIDAK LULUS";
+            status1 = "TIDAK LULUS";
         }
 
-        //Rata-rata & Status Kelulusan semester
+        //STATUS KELULUSAN MATKUL 2
+        String status2;
+        if (nilaiAkhir2 >= 60) {
+            status2 = "LULUS";
+        } else {
+            status2 = "TIDAK LULUS";
+        }
+
+
+        //RATA-RATA DAN STATUS KELULUSAN SEMESTER
         double rata2;   
         String statusSmtr;
         rata2 = (nilaiAkhir1 + nilaiAkhir2)/2;
-        if (status == "LULUS" && status == "LULUS") {
+        if (status1 == "LULUS" && status2 == "LULUS") {
             statusSmtr = "LULUS";
             if (rata2 >= 70) {
                 statusSmtr = "LULUS";
@@ -94,15 +103,15 @@ public class CM1_07 {
         }
 
 
-        //Output Penilaian Akademik
+        //OUTPUT PENILAIAN AKADEMIK
         System.out.println("\n================== HASIL PENILAIAN AKADEMIK ==================");
         System.out.println("Nama\t: " + nama);
         System.out.println("NIM\t: " + nim);
         
         System.out.println("\nMata Kuliah\t\tUTS\tUAS\tTugas\tNilai Akhir\tNIlai Huruf\tStatus");
         System.out.println("---------------------------------------------------------------------------------");
-        System.out.printf("Algoritma Pemograman\t%.0f\t%.0f\t%.0f\t%.0f\t\t%s\t\t%s\n", uts1, uas1, tugas1, nilaiAkhir1, nilaiHuruf1, status);
-        System.out.printf("Struktur Data\t\t%.0f\t%.0f\t%.0f\t%.0f\t\t%s\t\t%s\n", uts2, uas2, tugas2, nilaiAkhir2, nilaiHuruf2, status);
+        System.out.printf("Algoritma Pemograman\t%.0f\t%.0f\t%.0f\t%f\t%s\t\t%s\n", uts1, uas1, tugas1, nilaiAkhir1, nilaiHuruf1, status1);
+        System.out.printf("Struktur Data\t\t%.0f\t%.0f\t%.0f\t%f\t%s\t\t%s\n", uts2, uas2, tugas2, nilaiAkhir2, nilaiHuruf2, status2);
         System.out.println("\nRata-rata Nilai Akhir\t: "+ rata2);
         System.out.println("Status Semester\t: " + statusSmtr);
     
